@@ -40,4 +40,16 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
   </body>
+  <script>
+  const redirect = () => {
+    const pathname = window.location.pathname;
+    const search = window.location.search;
+    const hash = window.location.hash;
+    if (pathname !== '/' && pathname !== '/index.html') {
+      window.location.href = '/Shopping_Cart/index.html' + search + hash;
+    }
+  };
+  redirect();
+</script>
+
 </html>
